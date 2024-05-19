@@ -11,7 +11,9 @@ entity MIPS_int is
 	 CLOCK_50 : in std_logic;
     KEY: in std_logic_vector(3 downto 0);
 	 LEDR  : out std_logic_vector(7 downto 0);
-	 HEX0, HEX1, HEX2, HEX3, HEX4, HEX5: out std_logic_vector(6 downto 0)
+	 HEX0, HEX1, HEX2, HEX3, HEX4, HEX5: out std_logic_vector(6 downto 0);
+	 PCOUT: out std_logic_vector((larguraEnderecos-1) downto 0);
+	 SAIDA_ULA: out std_logic_vector((larguraDados-1) downto 0)
   );
 end entity;
 
@@ -235,19 +237,22 @@ display5 :  entity work.conversorHex7Seg
                  saida7seg => dis5);
 
 					  
-Sinais_controle(8) <= '1' when Instrucao(31 downto 26) = "000010" else '0';
-Sinais_controle(7) <= '1' when Instrucao(31 downto 26) = "000000" else '0';					
-Sinais_controle(6) <= '1' when Instrucao(31 downto 26) = "000000" or Instrucao(31 downto 26) = "100011" else '0';
-Sinais_controle(5) <= '1' when Instrucao(31 downto 26) = "100011" or Instrucao(31 downto 26) = "101011" else '0';
-Sinais_controle(4) <= '1' when Instrucao(5 downto 0)   = "100000" or Instrucao(31 downto 26) = "100011" or Instrucao(31 downto 26) = "101011" else '0';
-Sinais_controle(3) <= '1' when Instrucao(31 downto 26) = "100011" else '0'; 
-Sinais_controle(2) <= '1' when Instrucao(31 downto 26) = "000100" else '0';
-Sinais_controle(1) <= '1' when Instrucao(31 downto 26) = "100011" else '0';
-Sinais_controle(0) <= '1' when Instrucao(31 downto 26) = "101011" else '0';
+Sinais_controle(8) <= '1' when opcode = "000010" else '0';
+Sinais_controle(7) <= '1' when opcode = "000000" else '0';					
+Sinais_controle(6) <= '1' when opcode = "000000" or opcode = "100011" else '0';
+Sinais_controle(5) <= '1' when opcode = "100011" or opcode = "101011" else '0';
+Sinais_controle(4) <= '1' when funct   = "100000" or opcode = "100011" or opcode = "101011" else '0';
+Sinais_controle(3) <= '1' when opcode = "100011" else '0'; 
+Sinais_controle(2) <= '1' when opcode = "000100" else '0';
+Sinais_controle(1) <= '1' when opcode = "100011" else '0';
+Sinais_controle(0) <= '1' when opcode = "101011" else '0';
 
 
 LEDR(3 downto 0) <= mux_FPGA_out(27 downto 24);
 LEDR(7 downto 4) <= mux_FPGA_out(31 downto 28);
+
+PCOUT <= pc_out;
+SAIDA_ULA <= ULA_out;
 
 HEX0 <= dis0;
 HEX1 <= dis1;
