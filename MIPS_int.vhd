@@ -11,7 +11,9 @@ entity MIPS_int is
 	 CLOCK_50 : in std_logic;
     KEY: in std_logic_vector(3 downto 0);
 	 LEDR  : out std_logic_vector(7 downto 0);
-	 HEX0, HEX1, HEX2, HEX3, HEX4, HEX5: out std_logic_vector(6 downto 0)
+	 HEX0, HEX1, HEX2, HEX3, HEX4, HEX5: out std_logic_vector(6 downto 0);
+	 PCOUT: out std_logic_vector(larguraEnderecos-1 downto 0);
+	 SAIDA_ULA: out std_logic_vector(larguraDados-1 downto 0)
   );
 end entity;
 
@@ -248,6 +250,9 @@ Sinais_controle(0) <= '1' when Instrucao(31 downto 26) = "101011" else '0';
 
 LEDR(3 downto 0) <= mux_FPGA_out(27 downto 24);
 LEDR(7 downto 4) <= mux_FPGA_out(31 downto 28);
+
+SAIDA_ULA <= ULA_out;
+PCOUT <= pc_out;
 
 HEX0 <= dis0;
 HEX1 <= dis1;
