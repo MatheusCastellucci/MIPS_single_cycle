@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Sun Jun 02 23:02:42 2024
+Analysis & Synthesis Status : Successful - Mon Jun 03 13:04:34 2024
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : MIPS_Final
-Top-level Entity Name : MIPS_Final
+Top-level Entity Name : top_level
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 2829
-Total pins : 65
+Total pins : 57
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

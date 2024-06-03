@@ -53,12 +53,12 @@ begin
     process(clk) is
     begin
         if (rising_edge(clk)) then
-        --if (falling_edge(clk)) then   -- para resolver problemas de leitura e escrita no mesmo clock
             if (escreveC = '1') then
                 registrador(to_integer(unsigned(enderecoC))) := dadoEscritaC;
             end if;
         end if;
     end process;
+	 
     -- Se endereco = 0 : retorna ZERO
     saidaB <= zero when to_integer(unsigned(enderecoB)) = to_integer(unsigned(zero)) else registrador(to_integer(unsigned(enderecoB)));
     saidaA <= zero when to_integer(unsigned(enderecoA)) = to_integer(unsigned(zero)) else registrador(to_integer(unsigned(enderecoA)));

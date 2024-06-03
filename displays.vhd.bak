@@ -1,0 +1,27 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;    -- Biblioteca IEEE para funções aritméticas
+
+entity displays is
+	port (
+		invB		   : in 	std_logic;
+		A 	         : in	std_logic_vector(31 downto 0);
+		B 	         : in 	std_logic_vector(31 downto 0);
+		seletor		: in 	std_logic_vector(1 downto 0);
+		resultado   : out std_logic_vector(31 downto 0);
+		Z           : out std_logic
+		);
+		
+end entity;
+
+architecture comportamento of displays is
+
+
+
+begin
+
+
+	 
+Z <= 
+
+end architecture;

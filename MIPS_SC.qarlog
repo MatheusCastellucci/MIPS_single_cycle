@@ -1,0 +1,38 @@
+Quartus Prime Archive log --	C:/DesComp/MIPS_single_cycle/MIPS_SC.qarlog
+
+Archive:	C:/DesComp/MIPS_single_cycle/MIPS_SC.qar
+Date:		Mon Jun 03 13:09:20 2024
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/DesComp/MIPS_single_cycle/LUI.vhd
+C:/DesComp/MIPS_single_cycle/MIPS.qpf
+C:/DesComp/MIPS_single_cycle/MIPS_Final.qsf
+C:/DesComp/MIPS_single_cycle/ROMMIPS.vhd
+C:/DesComp/MIPS_single_cycle/ULA.vhd
+C:/DesComp/MIPS_single_cycle/ULASomaSub.vhd
+C:/DesComp/MIPS_single_cycle/ULA_CTRL.vhd
+C:/DesComp/MIPS_single_cycle/ULA_bit.vhd
+C:/DesComp/MIPS_single_cycle/ULA_bit_32.vhd
+C:/DesComp/MIPS_single_cycle/bancoReg.vhd
+C:/DesComp/MIPS_single_cycle/conversorHex7Seg.vhd
+C:/DesComp/MIPS_single_cycle/decoder_funct.vhd
+C:/DesComp/MIPS_single_cycle/decoder_opcode.vhd
+C:/DesComp/MIPS_single_cycle/displays.vhd
+C:/DesComp/MIPS_single_cycle/edgeDetector.vhd
+C:/DesComp/MIPS_single_cycle/estendeSinalGenerico.vhd
+C:/DesComp/MIPS_single_cycle/memoriaRAM.vhd
+C:/DesComp/MIPS_single_cycle/muxGenerico2x1.vhd
+C:/DesComp/MIPS_single_cycle/muxGenerico2x1_bit.vhd
+C:/DesComp/MIPS_single_cycle/muxGenerico4x1.vhd
+C:/DesComp/MIPS_single_cycle/muxGenerico4x1_bit.vhd
+C:/DesComp/MIPS_single_cycle/registradorGenerico.vhd
+C:/DesComp/MIPS_single_cycle/somaConstante.vhd
+C:/DesComp/MIPS_single_cycle/somador.vhd
+C:/DesComp/MIPS_single_cycle/somador_ULA.vhd
+C:/DesComp/MIPS_single_cycle/top_level.vhd
+c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 27 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
